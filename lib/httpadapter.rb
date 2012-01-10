@@ -13,6 +13,7 @@
 #    limitations under the License.
 
 
+require 'httpadapter/config'
 require 'httpadapter/version'
 require 'httpadapter/connection'
 

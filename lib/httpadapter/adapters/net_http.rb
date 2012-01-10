@@ -217,7 +217,7 @@ module HTTPAdapter
             http.enable_post_connection_check = true
           end
           http.verify_mode = OpenSSL::SSL::VERIFY_PEER
-          ca_file = File.expand_path(ENV['CA_FILE'] || '~/.cacert.pem')
+          ca_file = HTTPAdapter::Config.ssl_certificate
           if File.exists?(ca_file)
             http.ca_file = ca_file
           end
